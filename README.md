@@ -1,5 +1,5 @@
 # metacritic
-# A Random Assignment
+# Assignment
 
 ## Pre Requisites
 * Python 3.7.7 installed (A virtual environment is preferred)
