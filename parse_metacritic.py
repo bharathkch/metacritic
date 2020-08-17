@@ -32,13 +32,11 @@ application.config.update(os.environ)
 class Metacritic:
     """
     A simple class that takes a Metacritic URL and exposes method to return its titles and scores.
-
     """
 
     def __init__(self, url):
         """
         Constructor that takes the URL string and sets the instance variables for URL and result.
-
         :param url: none
         """
         self.url = url
@@ -47,7 +45,6 @@ class Metacritic:
     def parse_metacritic(self):
         """
         Method that returns the titles and scores in JSON.
-
         :return: None
         """
         req = Request(self.url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -73,7 +70,6 @@ class Metacritic:
         Converts the result object to JSON
         TODO:
         - Beautify JSON
-
         :return: str
         """
 
@@ -84,7 +80,6 @@ class Metacritic:
 def ping():
     """
     A ping function  for health checks.
-
     :return: str
     """
     return "OK"
@@ -93,7 +88,6 @@ def ping():
 def fetch_top_games():
     """
     Returns the games in JSON format.
-
     :return: list of games in JSON
     """
 
@@ -106,7 +100,6 @@ def fetch_top_games():
 def fetch_game(game_title):
     """
     Fetches a particular game from the parsed metacritic page.
-
     :param game_title: str
     :return: JSON with "title and score" or a custom error message
     """
